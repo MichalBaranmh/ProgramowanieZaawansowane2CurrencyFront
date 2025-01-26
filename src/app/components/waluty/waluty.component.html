@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Waluty</h2>
+    <button (click)="fetchCurrencies()">Pobierz waluty</button>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let curr of currencies">
+          <td>{{ curr }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

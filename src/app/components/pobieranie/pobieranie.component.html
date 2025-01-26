@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Pobieranie</h2>
+<label for="code">Kod waluty z dostępnych w tabeli</label>
+<input id="code" [(ngModel)]="code" type="text"/>
+
+<label for="startDate">Start Date (YYYYMMDD):</label>
+<input id="startDate" [(ngModel)]="startDate" type="text"/>
+
+<label for="endDate">End Date (YYYYMMDD):</label>
+<input id="endDate" [(ngModel)]="endDate" type="text"/>
+
+<button (click)="download()" >Pobierz kursy z NBP</button>
+</div>

@@ -1,0 +1,43 @@
+<div class="currency-rates-container">
+    <h2>Kursy</h2>
+  
+    <div class="filters">
+      <label for="year">Year:</label>
+      <input id="year" type="number" [(ngModel)]="year"/>
+  
+      <label for="quarter">Quarter:</label>
+      <input id="quarter" type="number" [(ngModel)]="quarter" />
+  
+      <label for="startDate">Start Date (YYYYMMDD):</label>
+      <input id="startDate" type="text" [(ngModel)]="startDate"  />
+  
+      <label for="endDate">End Date (YYYYMMDD):</label>
+      <input id="endDate" type="text" [(ngModel)]="endDate" />
+  
+      <label for="exactDate">Exact Date (YYYYMMDD):</label>
+      <input id="exactDate" type="text" [(ngModel)]="exactDate" />
+
+      <button (click)="fetchRates()">Pobierz kursy</button>
+    </div>
+  
+    <table *ngIf="rates.length > 0">
+      <thead>
+        <tr>
+          <th>Rate ID</th>
+          <th>Code</th>
+          <th>Effective Date</th>
+          <th>Mid</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rate of rates">
+          <td>{{ rate.RateId }}</td>
+          <td>{{ rate.code }}</td>
+          <td>{{ rate.effectiveDate }}</td>
+          <td>{{ rate.mid }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <p *ngIf="rates.length === 0">No rates found for the selected filters.</p>
+  </div>

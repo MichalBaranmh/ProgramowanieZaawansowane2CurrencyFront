@@ -1,0 +1,38 @@
+.currency-rates-container {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .filters {
+    margin-bottom: 20px;
+  }
+  
+  .filters label {
+    margin-right: 10px;
+  }
+  
+  .filters input {
+    margin-right: 20px;
+    padding: 5px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
